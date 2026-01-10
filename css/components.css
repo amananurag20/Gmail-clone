@@ -37,6 +37,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: var(--font-size-md);
+    line-height: 1;
     color: var(--color-text-secondary);
     background-color: var(--color-bg-card);
     padding: 0 4px;
@@ -63,7 +64,8 @@
 }
 
 .input-container.error .input-label {
-    color: var(--color-error);
+    color: var(--color-text-secondary);
+    top: calc(50% - 1px);
 }
 
 .input-container.error .auth-input:focus+.input-label,

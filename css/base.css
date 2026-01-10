@@ -90,6 +90,11 @@ body {
     text-align: center;
 }
 
+.auth-content-vertical .button-row {
+    justify-content: flex-end;
+    width: 100%;
+}
+
 /* Auth Left (Logo and Title area) */
 .auth-left {
     flex: 1;
@@ -261,6 +266,8 @@ body {
     align-items: flex-start;
     gap: var(--spacing-sm);
     text-align: left;
+    font-size: var(--font-size-sm);
+    width: 100%;
 }
 
 .sms-icon {
@@ -301,6 +308,8 @@ body {
 /* Auth Header Vertical */
 .auth-header-vertical {
     margin-bottom: var(--spacing-xl);
+    width: 100%;
+    max-width: 540px;
 }
 
 .auth-header-vertical .google-logo {
@@ -311,4 +320,5 @@ body {
 /* Auth Form Vertical */
 .auth-form-vertical {
     width: 100%;
+    max-width: 540px;
 }
