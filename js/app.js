@@ -27,6 +27,7 @@
 
         // Display elements
         displayEmail: document.getElementById('displayEmail'),
+        otpDisplayEmail: document.getElementById('otpDisplayEmail'),
         successEmail: document.getElementById('successEmail'),
 
         // Buttons
@@ -178,6 +179,11 @@
 
         // Show loading and transition
         await Transitions.simulateLoading(800);
+
+        // Update OTP display email
+        if (elements.otpDisplayEmail) {
+            elements.otpDisplayEmail.textContent = state.email;
+        }
 
         // Go to OTP step
         Transitions.goToStep(3);

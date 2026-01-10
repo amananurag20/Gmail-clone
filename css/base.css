@@ -91,9 +91,18 @@ body {
 }
 
 .auth-content-vertical .button-row {
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: flex-end !important;
+    width: 100% !important;
+    display: flex !important;
 }
+
+.auth-form-vertical form {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 /* Auth Left (Logo and Title area) */
 .auth-left {
@@ -306,10 +315,13 @@ body {
 }
 
 /* Auth Header Vertical */
+/* Auth Header Vertical */
 .auth-header-vertical {
     margin-bottom: var(--spacing-xl);
-    width: 100%;
-    max-width: 540px;
+    width: 100% !important;
+    max-width: 448px !important;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .auth-header-vertical .google-logo {
@@ -319,6 +331,8 @@ body {
 
 /* Auth Form Vertical */
 .auth-form-vertical {
-    width: 100%;
-    max-width: 540px;
+    width: 100% !important;
+    max-width: 448px !important;
+    margin-left: auto;
+    margin-right: auto;
 }
