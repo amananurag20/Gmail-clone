@@ -50,7 +50,7 @@ body {
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-card);
     width: 100%;
-    max-width: var(--card-max-width);
+    max-width: 1120px;
     overflow: hidden;
     position: relative;
     /* Center vertically */
@@ -78,7 +78,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
-    min-height: 380px;
+    min-height: 350px;
 }
 
 .auth-content-vertical {
@@ -103,7 +103,7 @@ body {
     max-width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 72px;
+    padding-top: 60px;
     /* Align with "Sign in" text (Logo 48px + Margin 24px) */
 }
 
@@ -130,9 +130,11 @@ body {
 /* Auth Subtitle */
 .auth-subtitle {
     font-size: var(--font-size-md);
-    color: var(--color-primary);
+    color: var(--color-text-primary);
+    /* Changed from primary (blue) to text-primary (black/gray) */
     line-height: var(--line-height-md);
-    font-weight: 500;
+    font-weight: 400;
+    /* Regular weight */
 }
 
 /* Guest Mode Text */
@@ -142,8 +144,8 @@ body {
     line-height: var(--line-height-md);
     margin-top: 48px;
     margin-bottom: 48px;
-    /* Force wrapping to match reference */
-    max-width: 320px;
+    max-width: 100%;
+    /* Allow full width to match reference */
 }
 
 .guest-info .learn-more {
@@ -197,19 +199,20 @@ body {
 
 /* Auth Footer */
 .auth-footer {
-    /* Remove position: fixed */
-    width: 100%;
-    max-width: 1040px;
-    /* Align with card max width usually, or full width */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md) 0;
-    /* Align with edges */
-    margin-top: var(--spacing-lg);
-    /* Ensure gap from card */
+    padding: var(--spacing-md) var(--spacing-lg);
     background-color: transparent;
     z-index: 10;
+    width: 100%;
+    max-width: 1040px;
+    /* Match card width */
+    margin: 0 auto;
 }
 
 .footer-left {

@@ -112,11 +112,11 @@
 /* Large Desktop */
 @media (min-width: 1024px) {
     .auth-card {
-        max-width: 1040px;
+        max-width: 1120px;
     }
 
     .auth-step {
-        min-height: 380px;
+        min-height: 350px;
     }
 }
 
