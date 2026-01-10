@@ -44,6 +44,12 @@
     .auth-title {
         font-size: 28px;
     }
+
+    .guest-info {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        max-width: 100%;
+    }
 }
 
 /* Mobile */

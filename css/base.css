@@ -120,9 +120,9 @@ body {
 /* Auth Title */
 .auth-title {
     font-family: var(--font-primary);
-    font-size: 32px;
+    font-size: 36px;
     font-weight: var(--font-weight-regular);
-    line-height: 40px;
+    line-height: 44px;
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-sm);
 }
@@ -132,6 +132,28 @@ body {
     font-size: var(--font-size-md);
     color: var(--color-primary);
     line-height: var(--line-height-md);
+    font-weight: 500;
+}
+
+/* Guest Mode Text */
+.guest-info {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-md);
+    margin-top: 48px;
+    margin-bottom: 48px;
+    /* Force wrapping to match reference */
+    max-width: 320px;
+}
+
+.guest-info .learn-more {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.guest-info .learn-more:hover {
+    text-decoration: underline;
 }
 
 /* User Chip */
