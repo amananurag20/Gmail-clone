@@ -1,0 +1,250 @@
+/* Component Styles */
+
+/* ==================== Input Styles ==================== */
+
+.input-container {
+    position: relative;
+    margin-bottom: var(--spacing-sm);
+}
+
+.auth-input {
+    width: 100%;
+    height: var(--input-height);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    font-size: var(--font-size-md);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: border-color var(--transition-fast), border-width var(--transition-fast);
+}
+
+.auth-input:hover {
+    border-color: var(--color-border-hover);
+}
+
+.auth-input:focus {
+    border-color: var(--color-border-focus);
+    border-width: 2px;
+    padding: calc(var(--input-padding-y) - 1px) calc(var(--input-padding-x) - 1px);
+}
+
+/* Floating Label */
+.input-label {
+    position: absolute;
+    left: var(--input-padding-x);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+    background-color: var(--color-bg-card);
+    padding: 0 4px;
+    pointer-events: none;
+    transition: all var(--transition-fast);
+}
+
+.auth-input:focus+.input-label,
+.auth-input:not(:placeholder-shown)+.input-label {
+    top: 0;
+    font-size: var(--font-size-xs);
+    transform: translateY(-50%);
+}
+
+.auth-input:focus+.input-label {
+    color: var(--color-primary);
+}
+
+/* Error State */
+.input-container.error .auth-input {
+    border-color: var(--color-border-error);
+    border-width: 2px;
+    padding: calc(var(--input-padding-y) - 1px) calc(var(--input-padding-x) - 1px);
+}
+
+.input-container.error .input-label {
+    color: var(--color-error);
+}
+
+.input-container.error .auth-input:focus+.input-label,
+.input-container.error .auth-input:not(:placeholder-shown)+.input-label {
+    color: var(--color-error);
+}
+
+.input-error {
+    display: none;
+    margin-top: var(--spacing-xs);
+    padding-left: var(--input-padding-x);
+    font-size: var(--font-size-xs);
+    color: var(--color-error);
+    line-height: var(--line-height-xs);
+}
+
+.input-error.visible {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+}
+
+.input-error::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%23b3261e' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* ==================== Button Styles ==================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--btn-height);
+    padding: 0 var(--btn-padding-x);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.btn-primary:active {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-primary:disabled {
+    background-color: var(--color-text-disabled);
+    cursor: not-allowed;
+}
+
+/* Text Button */
+.btn-text {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.btn-text:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn-text:active {
+    background-color: rgba(11, 87, 208, 0.12);
+}
+
+/* Button Row */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-xl);
+}
+
+/* ==================== Link Styles ==================== */
+
+.forgot-link {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    transition: color var(--transition-fast);
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.resend-link {
+    margin-bottom: 0;
+}
+
+.learn-more {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* Guest Info */
+.guest-info {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ==================== Checkbox Styles ==================== */
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-border);
+    border-radius: 2px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    transition: all var(--transition-fast);
+}
+
+.checkbox:hover {
+    border-color: var(--color-border-hover);
+}
+
+.checkbox:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ==================== Form Focus Management ==================== */
+
+.input-container:focus-within .input-label {
+    color: var(--color-primary);
+}
+
+.input-container.error:focus-within .input-label {
+    color: var(--color-error);
+}

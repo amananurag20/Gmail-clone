@@ -1,0 +1,95 @@
+/* Design System Variables - Google Material Design Inspired */
+
+:root {
+    /* Colors - Primary */
+    --color-primary: #0b57d0;
+    --color-primary-hover: #0842a0;
+    --color-primary-light: rgba(11, 87, 208, 0.08);
+
+    /* Colors - Text */
+    --color-text-primary: #1f1f1f;
+    --color-text-secondary: #5f6368;
+    --color-text-disabled: #9aa0a6;
+
+    /* Colors - State */
+    --color-error: #b3261e;
+    --color-error-bg: #fce8e6;
+    --color-success: #34a853;
+    --color-success-light: rgba(52, 168, 83, 0.12);
+
+    /* Colors - Background */
+    --color-bg-page: #f0f4f8;
+    --color-bg-card: #ffffff;
+    --color-bg-hover: rgba(60, 64, 67, 0.08);
+    --color-bg-focus: rgba(60, 64, 67, 0.12);
+
+    /* Colors - Border */
+    --color-border: #747775;
+    --color-border-hover: #1f1f1f;
+    --color-border-focus: #0b57d0;
+    --color-border-error: #b3261e;
+
+    /* Typography - Font Families */
+    --font-primary: 'Google Sans', 'Roboto', Arial, sans-serif;
+    --font-secondary: 'Roboto', Arial, sans-serif;
+
+    /* Typography - Font Sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 24px;
+    --font-size-xl: 36px;
+
+    /* Typography - Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+
+    /* Typography - Line Heights */
+    --line-height-xs: 16px;
+    --line-height-sm: 20px;
+    --line-height-md: 24px;
+    --line-height-lg: 32px;
+    --line-height-xl: 44px;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 50%;
+
+    /* Shadows */
+    --shadow-card: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+    --shadow-elevated: 0 2px 4px 0 rgba(60, 64, 67, 0.3), 0 4px 12px 4px rgba(60, 64, 67, 0.15);
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Z-Index */
+    --z-loading: 100;
+    --z-modal: 200;
+
+    /* Card Dimensions */
+    --card-max-width: 750px;
+    --card-padding: 48px;
+    --card-padding-mobile: 24px;
+
+    /* Input */
+    --input-height: 56px;
+    --input-padding-x: 16px;
+    --input-padding-y: 16px;
+
+    /* Button */
+    --btn-height: 40px;
+    --btn-padding-x: 24px;
+}
