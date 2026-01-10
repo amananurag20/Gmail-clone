@@ -133,8 +133,30 @@
         // Update display email in password step
         elements.displayEmail.textContent = state.email;
 
+        // Extract first name from email and update welcome title
+        const firstName = extractFirstName(state.email);
+        const welcomeTitle = document.getElementById('welcomeTitle');
+        if (welcomeTitle) {
+            welcomeTitle.textContent = `Hi ${firstName}`;
+        }
+
         // Go to password step
         Transitions.goToStep(2);
+    }
+
+    /**
+     * Extract first name from email address
+     */
+    function extractFirstName(email) {
+        // Get the part before @ symbol
+        const username = email.split('@')[0];
+
+        // Split by common separators (., _, -)
+        const parts = username.split(/[._-]/);
+
+        // Capitalize first letter of first part
+        const firstName = parts[0];
+        return firstName.charAt(0).toUpperCase() + firstName.slice(1);
     }
 
     /**
