@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* Remove justify-content: center to allow margin: auto to work */
     padding: var(--spacing-lg);
     position: relative;
 }
@@ -53,6 +53,8 @@ body {
     max-width: var(--card-max-width);
     overflow: hidden;
     position: relative;
+    /* Center vertically */
+    margin: auto;
 }
 
 /* Auth Step */
@@ -74,26 +76,35 @@ body {
 .auth-content {
     display: flex;
     flex-direction: row;
-    gap: 48px;
-    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    min-height: 380px;
 }
 
 .auth-content-vertical {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 /* Auth Left (Logo and Title area) */
 .auth-left {
-    flex: 0 0 auto;
-    min-width: 200px;
-    padding-top: 8px;
+    flex: 1;
+    max-width: 50%;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Auth Right (Form area) */
 .auth-right {
     flex: 1;
-    min-width: 0;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px;
+    /* Align with "Sign in" text (Logo 48px + Margin 24px) */
 }
 
 /* Google Logo */
@@ -164,15 +175,19 @@ body {
 
 /* Auth Footer */
 .auth-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    /* Remove position: fixed */
+    width: 100%;
+    max-width: 1040px;
+    /* Align with card max width usually, or full width */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    /* Align with edges */
+    margin-top: var(--spacing-lg);
+    /* Ensure gap from card */
     background-color: transparent;
+    z-index: 10;
 }
 
 .footer-left {

@@ -80,13 +80,13 @@
     --z-modal: 200;
 
     /* Card Dimensions */
-    --card-max-width: 750px;
+    --card-max-width: 1040px;
     --card-padding: 48px;
     --card-padding-mobile: 24px;
 
     /* Input */
     --input-height: 56px;
-    --input-padding-x: 16px;
+    --input-padding-x: 14px;
     --input-padding-y: 16px;
 
     /* Button */
