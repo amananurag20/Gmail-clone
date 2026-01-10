@@ -176,7 +176,14 @@
 }
 
 .resend-link {
+    margin-top: var(--spacing-xl);
     margin-bottom: 0;
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-normal);
+}
+
+.resend-link:hover {
+    color: var(--color-text-primary);
 }
 
 .learn-more {

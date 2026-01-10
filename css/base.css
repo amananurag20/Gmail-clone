@@ -120,8 +120,8 @@ body {
     max-width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
-    /* Align with "Sign in" text (Logo 48px + Margin 24px) */
+    padding-top: 100px;
+    /* Push content lower to align with middle of left panel */
 }
 
 /* Google Logo */
@@ -186,6 +186,7 @@ body {
     cursor: pointer;
     transition: background-color var(--transition-fast);
     max-width: 100%;
+    margin-top: var(--spacing-md);
 }
 
 .user-chip:hover {
