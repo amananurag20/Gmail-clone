@@ -120,7 +120,7 @@ body {
     max-width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 150px;
     /* Push content lower to align with middle of left panel */
 }
 
