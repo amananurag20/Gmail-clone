@@ -270,7 +270,8 @@
     border-radius: var(--radius-sm);
     background-color: var(--color-bg-card);
     padding: 0;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    height: var(--input-height);
 }
 
 .otp-input-container:hover {
@@ -279,6 +280,13 @@
 
 .otp-input-container:focus-within {
     border-color: var(--color-border-focus);
+    border-width: 2px;
+}
+
+/* Error state for OTP container */
+.otp-input-container.error,
+.input-container.error .otp-input-container {
+    border-color: var(--color-border-error);
     border-width: 2px;
 }
 
@@ -294,12 +302,15 @@
     border: none !important;
     background: transparent !important;
     flex: 1;
-    padding-left: var(--spacing-xs) !important;
+    padding-left: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 .otp-input-field:focus {
     border: none !important;
     outline: none !important;
+    box-shadow: none !important;
 }
 
 .otp-input-field::placeholder {
