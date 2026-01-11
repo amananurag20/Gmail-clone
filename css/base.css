@@ -114,14 +114,37 @@ body {
     align-items: flex-start;
 }
 
-/* Auth Right (Form area) */
+/* Auth Right (Form area) - Base styles */
 .auth-right {
     flex: 1;
     max-width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 150px;
-    /* Push content lower to align with middle of left panel */
+}
+
+/* Step 1 (Email) - Right panel alignment */
+#step1 .auth-right {
+    padding-top: 80px;
+}
+
+/* Step 2 (Password) - Right panel alignment */
+#step2 .auth-right {
+    padding-top: 130px;
+}
+
+/* Step 2 - Add extra space before buttons to keep them at bottom */
+#step2 .button-row {
+    margin-top: 60px;
+}
+
+/* Step 3 (OTP/Account Recovery) - Right panel aligned with left content */
+#step3 .auth-right {
+    padding-top: 80px;
+}
+
+/* Step 3 - Add extra space before buttons to keep them at bottom */
+#step3 .button-row {
+    margin-top: 60px;
 }
 
 /* Google Logo */
