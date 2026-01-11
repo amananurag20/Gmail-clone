@@ -27,11 +27,12 @@ body {
     /* No gap between card and footer */
 }
 
-/* Loading Bar */
+/* Loading Bar - positioned at top of auth-card */
 .loading-bar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     width: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--color-primary), #4285f4, #34a853, #fbbc05, #ea4335);
@@ -39,6 +40,7 @@ body {
     z-index: var(--z-loading);
     opacity: 0;
     transition: opacity var(--transition-fast);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 }
 
 .loading-bar.active {
