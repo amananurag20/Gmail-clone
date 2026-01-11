@@ -1,30 +1,264 @@
-/* Responsive Styles */
+/* Responsive Styles - Mobile First Approach */
 
-/* Tablet */
-@media (max-width: 768px) {
+/* ==================== Small Mobile (up to 320px) ==================== */
+@media (max-width: 320px) {
     :root {
-        --card-padding: 36px;
-        --card-max-width: 450px;
+        --card-padding: 16px;
+        --spacing-lg: 16px;
+        --spacing-xl: 20px;
     }
 
     .page-container {
-        padding: var(--spacing-md);
-        justify-content: flex-start;
-        padding-top: 60px;
+        padding: 8px;
+        padding-top: 16px;
     }
 
+    .auth-card {
+        padding: var(--card-padding);
+        border-radius: var(--radius-md);
+    }
+
+    .google-logo svg {
+        height: 28px;
+        width: 28px;
+    }
+
+    .auth-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .auth-subtitle {
+        font-size: 13px;
+    }
+
+    .auth-input {
+        font-size: 14px;
+        height: 48px;
+    }
+
+    .btn {
+        height: 40px;
+        font-size: 13px;
+        padding: 0 16px;
+    }
+}
+
+/* ==================== Mobile (321px to 480px) ==================== */
+@media (max-width: 480px) {
+    :root {
+        --card-padding: 20px;
+    }
+
+    .page-container {
+        padding: var(--spacing-sm);
+        padding-top: 24px;
+        min-height: 100vh;
+        justify-content: flex-start;
+    }
+
+    .auth-card {
+        border-radius: var(--radius-lg);
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: var(--card-padding);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Stack layout vertically on mobile */
     .auth-content {
         flex-direction: column;
         gap: var(--spacing-lg);
     }
 
-    .auth-left {
-        min-width: auto;
-        padding-top: 0;
+    .auth-left,
+    .auth-right {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
     }
 
+    /* Remove specific step padding on mobile */
+    #step1 .auth-right,
+    #step2 .auth-right,
+    #step3 .auth-right {
+        padding-top: var(--spacing-lg) !important;
+    }
+
+    /* Reset button row margins on mobile */
+    #step2 .button-row,
+    #step3 .button-row {
+        margin-top: var(--spacing-xl) !important;
+    }
+
+    .google-logo {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .google-logo svg {
+        height: 36px;
+        width: 36px;
+    }
+
+    .auth-title {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .auth-subtitle {
+        font-size: 14px;
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Buttons stack vertically on mobile */
+    .button-row {
+        flex-direction: column-reverse;
+        gap: var(--spacing-sm);
+        width: 100%;
+    }
+
+    .button-row .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-text {
+        order: 1;
+    }
+
+    .btn-primary {
+        order: 2;
+    }
+
+    .user-chip {
+        max-width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+
+    .user-email {
+        max-width: 180px;
+    }
+
+    /* OTP specific styles */
+    .otp-message {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .otp-input-container {
+        width: 100%;
+    }
+
+    /* Guest info responsive */
+    .guest-info {
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    /* Vertical layout adjustments */
+    .auth-content-vertical {
+        padding: var(--spacing-md) 0;
+    }
+
+    .auth-header-vertical,
+    .auth-form-vertical {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Footer */
+    .auth-footer {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-md);
+        margin-top: auto;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-right {
+        gap: var(--spacing-lg);
+    }
+
+    /* Resend link */
+    .resend-link {
+        margin-top: var(--spacing-md) !important;
+    }
+
+    /* Success page */
+    .success-content {
+        text-align: center;
+    }
+}
+
+/* ==================== Tablet (481px to 768px) ==================== */
+@media (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --card-padding: 32px;
+        --card-max-width: 480px;
+    }
+
+    .page-container {
+        padding: var(--spacing-md);
+        padding-top: 48px;
+        justify-content: flex-start;
+    }
+
+    .auth-card {
+        max-width: var(--card-max-width);
+        margin: 0 auto;
+    }
+
+    /* Stack layout vertically on tablet */
+    .auth-content {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+
+    .auth-left,
     .auth-right {
-        padding-top: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Remove specific step padding on tablet */
+    #step1 .auth-right,
+    #step2 .auth-right,
+    #step3 .auth-right {
+        padding-top: var(--spacing-lg) !important;
+    }
+
+    /* Reset button row margins on tablet */
+    #step2 .button-row,
+    #step3 .button-row {
+        margin-top: var(--spacing-xl) !important;
+    }
+
+    .auth-title {
+        font-size: 26px;
+    }
+
+    .button-row {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .button-row .btn {
+        width: auto;
+    }
+
+    .guest-info {
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
     }
 
     .auth-footer {
@@ -40,87 +274,106 @@
         width: 100%;
         justify-content: center;
     }
-
-    .auth-title {
-        font-size: 28px;
-    }
-
-    .guest-info {
-        margin-top: 24px;
-        margin-bottom: 24px;
-        max-width: 100%;
-    }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
+/* ==================== Small Desktop (769px to 1024px) ==================== */
+@media (min-width: 769px) and (max-width: 1024px) {
     :root {
-        --card-padding: 24px;
-    }
-
-    .page-container {
-        padding: var(--spacing-sm);
-        padding-top: 40px;
+        --card-padding: 40px;
     }
 
     .auth-card {
-        border-radius: var(--radius-lg);
-        box-shadow: none;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        max-width: 900px;
     }
 
-    .google-logo svg {
-        height: 36px;
-        width: 36px;
+    .auth-left {
+        padding-right: var(--spacing-lg);
     }
 
-    .auth-title {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .button-row {
-        flex-direction: column-reverse;
-        gap: var(--spacing-md);
-    }
-
-    .button-row .btn {
-        width: 100%;
-    }
-
-    .user-chip {
-        max-width: 100%;
-    }
-
-    .otp-subtitle {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .auth-footer {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-sm);
-    }
-
-    .footer-right {
-        gap: var(--spacing-md);
+    .auth-step {
+        min-height: 300px;
     }
 }
 
-/* Large Desktop */
-@media (min-width: 1024px) {
+/* ==================== Large Desktop (1025px+) ==================== */
+@media (min-width: 1025px) {
     .auth-card {
-        max-width: 1120px;
+        max-width: 1000px;
     }
 
     .auth-step {
         min-height: 350px;
     }
+
+    .auth-left {
+        padding-right: 32px;
+    }
 }
 
-/* Prefers Reduced Motion */
+/* ==================== Extra Large Desktop (1400px+) ==================== */
+@media (min-width: 1400px) {
+    .auth-card {
+        max-width: 1120px;
+    }
+}
+
+/* ==================== Landscape Mobile ==================== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .page-container {
+        padding-top: 16px;
+        min-height: auto;
+    }
+
+    .auth-card {
+        margin-bottom: 16px;
+    }
+
+    .auth-content {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+
+    .auth-left,
+    .auth-right {
+        max-width: 50%;
+        flex: 1;
+    }
+
+    #step1 .auth-right,
+    #step2 .auth-right,
+    #step3 .auth-right {
+        padding-top: 40px !important;
+    }
+
+    .auth-footer {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* ==================== Touch Device Optimizations ==================== */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 48px;
+    }
+
+    .auth-input {
+        min-height: 56px;
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+    .user-chip {
+        padding: 8px 16px 8px 8px;
+    }
+
+    .forgot-link,
+    .footer-link,
+    .learn-more {
+        padding: 8px 0;
+    }
+}
+
+/* ==================== Prefers Reduced Motion ==================== */
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -137,7 +390,7 @@
     }
 }
 
-/* High Contrast Mode */
+/* ==================== High Contrast Mode ==================== */
 @media (prefers-contrast: high) {
     :root {
         --color-border: #000000;
@@ -151,9 +404,13 @@
     .auth-input {
         border-width: 2px;
     }
+
+    .btn-primary {
+        background-color: #000000;
+    }
 }
 
-/* Dark Mode Support */
+/* ==================== Dark Mode Support ==================== */
 @media (prefers-color-scheme: dark) {
     :root {
         --color-bg-page: #1a1a1a;
@@ -161,14 +418,48 @@
         --color-text-primary: #e8eaed;
         --color-text-secondary: #9aa0a6;
         --color-border: #5f6368;
-        --color-border-hover: #e8eaed;
+        --color-border-hover: #8e8e8e;
+        --color-bg-hover: rgba(255, 255, 255, 0.08);
+    }
+
+    .auth-card {
+        border-color: rgba(255, 255, 255, 0.1);
     }
 
     .auth-input {
         background-color: var(--color-bg-card);
+        color: var(--color-text-primary);
     }
 
     .input-label {
         background-color: var(--color-bg-card);
+    }
+
+    .user-chip {
+        border-color: var(--color-border);
+    }
+
+    .otp-input-container {
+        background-color: var(--color-bg-card);
+    }
+}
+
+/* ==================== Print Styles ==================== */
+@media print {
+    .page-container {
+        background: white;
+    }
+
+    .auth-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .auth-footer {
+        display: none;
+    }
+
+    .btn {
+        display: none;
     }
 }
