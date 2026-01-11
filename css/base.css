@@ -143,8 +143,10 @@ body {
 }
 
 /* Step 3 - Add extra space before buttons to keep them at bottom */
-#step3 .button-row {
-    margin-top: 60px;
+#step3 .button-row,
+#step3 .auth-right .button-row,
+#step3 #otpForm .button-row {
+    margin-top: 80px !important;
 }
 
 /* Google Logo */
