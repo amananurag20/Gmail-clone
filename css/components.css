@@ -63,13 +63,16 @@
     padding: calc(var(--input-padding-y) - 1px) calc(var(--input-padding-x) - 1px);
 }
 
-.input-container.error .input-label {
-    color: var(--color-text-secondary);
-    top: calc(50% - 1px);
+/* Error label - ensure it stays at top when input has value */
+.input-container.error .auth-input:not(:placeholder-shown)+.input-label {
+    top: 0;
+    font-size: var(--font-size-xs);
+    transform: translateY(-50%);
+    color: var(--color-error);
+    z-index: 1;
 }
 
-.input-container.error .auth-input:focus+.input-label,
-.input-container.error .auth-input:not(:placeholder-shown)+.input-label {
+.input-container.error .auth-input:focus+.input-label {
     color: var(--color-error);
 }
 
